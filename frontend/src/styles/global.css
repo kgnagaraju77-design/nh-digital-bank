@@ -1,0 +1,740 @@
+:root {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #172033;
+  background: #f5f7fb;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --nh-primary: #123c73;
+  --nh-primary-dark: #0d2d57;
+  --nh-secondary: #1d6fdc;
+
+  --nh-background: #f5f7fb;
+  --nh-surface: #ffffff;
+  --nh-border: #e3e8f0;
+
+  --nh-text: #172033;
+  --nh-muted: #687386;
+
+  --nh-success: #16805c;
+  --nh-success-bg: #e9f7f1;
+
+  --nh-danger: #c0392b;
+  --nh-danger-bg: #fdf0ef;
+
+  --nh-shadow:
+    0 4px 18px rgba(20, 40, 80, 0.07);
+
+  --nh-radius: 12px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+
+body {
+  background: var(--nh-background);
+  color: var(--nh-text);
+}
+
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+/* ============================================================
+   APPLICATION LAYOUT
+   ============================================================ */
+
+.nh-app {
+  min-height: 100vh;
+}
+
+
+.nh-topbar {
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 32px;
+
+  background: var(--nh-surface);
+
+  border-bottom:
+    1px solid var(--nh-border);
+}
+
+
+.nh-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.nh-logo {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: var(--nh-primary);
+  color: white;
+
+  font-weight: 800;
+}
+
+
+.nh-brand-name {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 750;
+
+  color: var(--nh-primary);
+}
+
+
+.nh-brand-tagline {
+  margin: 2px 0 0;
+
+  color: var(--nh-muted);
+
+  font-size: 11px;
+}
+
+
+.nh-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.nh-avatar {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e8eef8;
+
+  color: var(--nh-primary);
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   MAIN LAYOUT
+   ============================================================ */
+
+.nh-layout {
+  display: flex;
+  min-height: calc(100vh - 72px);
+}
+
+
+.nh-sidebar {
+  width: 245px;
+
+  flex-shrink: 0;
+
+  padding: 24px 14px;
+
+  background: var(--nh-surface);
+
+  border-right:
+    1px solid var(--nh-border);
+}
+
+
+.nh-sidebar-title {
+  padding: 0 12px 10px;
+
+  color: var(--nh-muted);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+
+.nh-nav-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 14px;
+
+  margin-bottom: 4px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #4c586b;
+
+  text-align: left;
+
+  font-size: 14px;
+}
+
+
+.nh-nav-item:hover {
+  background: #f1f5fa;
+}
+
+
+.nh-nav-item.active {
+  background: #eaf1fb;
+
+  color: var(--nh-primary);
+
+  font-weight: 650;
+}
+
+
+.nh-content {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 32px;
+}
+
+
+/* ============================================================
+   PAGE HEADER
+   ============================================================ */
+
+.nh-page-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+
+.nh-page-title {
+  margin: 0;
+
+  font-size: 28px;
+  line-height: 1.2;
+
+  color: var(--nh-text);
+}
+
+
+.nh-page-description {
+  margin: 7px 0 0;
+
+  color: var(--nh-muted);
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.nh-btn {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 18px;
+
+  border-radius: 8px;
+
+  font-weight: 650;
+
+  border: 1px solid transparent;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+.nh-btn:hover {
+  transform: translateY(-1px);
+}
+
+
+.nh-btn-primary {
+  background: var(--nh-primary);
+  color: white;
+}
+
+
+.nh-btn-primary:hover {
+  background: var(--nh-primary-dark);
+}
+
+
+.nh-btn-secondary {
+  background: white;
+
+  color: var(--nh-primary);
+
+  border-color:
+    var(--nh-border);
+}
+
+
+.nh-btn-danger {
+  background: white;
+
+  color: var(--nh-danger);
+
+  border-color:
+    #efcfca;
+}
+
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+
+.nh-search-container {
+  position: relative;
+
+  margin-bottom: 24px;
+}
+
+
+.nh-search-icon {
+  position: absolute;
+
+  left: 15px;
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  color: var(--nh-muted);
+}
+
+
+.nh-search {
+  width: 100%;
+
+  height: 48px;
+
+  padding:
+    0 16px 0 44px;
+
+  border:
+    1px solid var(--nh-border);
+
+  border-radius: 9px;
+
+  background: white;
+
+  outline: none;
+
+  color: var(--nh-text);
+}
+
+
+.nh-search:focus {
+  border-color:
+    var(--nh-secondary);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(29, 111, 220, 0.10);
+}
+
+
+/* ============================================================
+   BENEFICIARY GRID
+   ============================================================ */
+
+.nh-beneficiary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(330px, 1fr)
+    );
+
+  gap: 18px;
+}
+
+
+/* ============================================================
+   BENEFICIARY CARD
+   ============================================================ */
+
+.nh-beneficiary-card {
+  padding: 22px;
+
+  background: white;
+
+  border:
+    1px solid var(--nh-border);
+
+  border-radius:
+    var(--nh-radius);
+
+  box-shadow:
+    var(--nh-shadow);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+
+.nh-beneficiary-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 26px
+    rgba(20, 40, 80, 0.10);
+}
+
+
+.nh-beneficiary-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  margin-bottom: 20px;
+}
+
+
+.nh-beneficiary-identity {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.nh-beneficiary-avatar {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf1fb;
+
+  color: var(--nh-primary);
+
+  font-weight: 750;
+}
+
+
+.nh-beneficiary-name {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+.nh-beneficiary-bank {
+  margin: 4px 0 0;
+
+  color: var(--nh-muted);
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.nh-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding:
+    5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+.nh-status::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+}
+
+
+.nh-status-active {
+  color: var(--nh-success);
+
+  background:
+    var(--nh-success-bg);
+}
+
+
+.nh-status-deleted {
+  color: var(--nh-danger);
+
+  background:
+    var(--nh-danger-bg);
+}
+
+
+/* ============================================================
+   BANK DETAILS
+   ============================================================ */
+
+.nh-detail-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 11px 0;
+
+  border-bottom:
+    1px solid #edf0f4;
+}
+
+
+.nh-detail-label {
+  color: var(--nh-muted);
+
+  font-size: 12px;
+}
+
+
+.nh-detail-value {
+  color: var(--nh-text);
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  text-align: right;
+}
+
+
+/* ============================================================
+   CARD ACTION
+   ============================================================ */
+
+.nh-card-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: 18px;
+}
+
+
+.nh-transfer-btn {
+  border: 0;
+
+  background: transparent;
+
+  color: var(--nh-secondary);
+
+  font-weight: 700;
+
+  padding: 8px 0;
+}
+
+
+.nh-transfer-btn:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   EMPTY / ERROR
+   ============================================================ */
+
+.nh-empty {
+  padding: 60px 20px;
+
+  text-align: center;
+
+  background: white;
+
+  border:
+    1px dashed
+    var(--nh-border);
+
+  border-radius:
+    var(--nh-radius);
+}
+
+
+.nh-empty-icon {
+  font-size: 36px;
+
+  margin-bottom: 12px;
+}
+
+
+.nh-empty h2 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+}
+
+
+.nh-empty p {
+  margin: 0 0 20px;
+
+  color: var(--nh-muted);
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .nh-sidebar {
+    width: 190px;
+  }
+
+  .nh-content {
+    padding: 24px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .nh-topbar {
+    padding: 0 16px;
+  }
+
+  .nh-layout {
+    display: block;
+  }
+
+  .nh-sidebar {
+    width: 100%;
+
+    display: flex;
+
+    overflow-x: auto;
+
+    padding: 10px;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid var(--nh-border);
+  }
+
+  .nh-sidebar-title {
+    display: none;
+  }
+
+  .nh-nav-item {
+    width: auto;
+
+    white-space: nowrap;
+  }
+
+  .nh-content {
+    padding: 20px 16px;
+  }
+
+  .nh-page-header {
+    flex-direction: column;
+  }
+
+  .nh-beneficiary-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

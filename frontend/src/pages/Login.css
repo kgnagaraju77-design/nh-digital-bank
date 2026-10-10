@@ -1,0 +1,186 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f7fb;
+  padding: 30px 15px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 440px;
+}
+
+.bank-brand {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.bank-logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: #0d47a1;
+  color: white;
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.bank-brand h1 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  color: #12355b;
+}
+
+.bank-brand p {
+  margin-top: 6px;
+
+  color: #64748b;
+
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.login-card {
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 35px;
+
+  box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.08);
+}
+
+.login-card h2 {
+  text-align: center;
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  color: #1e293b;
+}
+
+.login-subtitle {
+  text-align: center;
+
+  color: #64748b;
+
+  margin-bottom: 28px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-weight: 500;
+
+  color: #334155;
+}
+
+.form-control {
+  min-height: 48px;
+
+  border-radius: 8px;
+
+  border: 1px solid #cbd5e1;
+}
+
+.form-control:focus {
+  border-color: #0d47a1;
+
+  box-shadow:
+    0 0 0 0.2rem rgba(13, 71, 161, 0.12);
+}
+
+.forgot-password {
+  text-align: right;
+
+  margin-bottom: 20px;
+}
+
+.link-button {
+  border: none;
+
+  background: transparent;
+
+  padding: 0;
+
+  color: #0d47a1;
+
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.login-button {
+  min-height: 48px;
+
+  border-radius: 8px;
+
+  background: #0d47a1;
+
+  color: white;
+
+  font-weight: 600;
+
+  border: none;
+}
+
+.login-button:hover {
+  background: #083579;
+
+  color: white;
+}
+
+.register-section {
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #64748b;
+}
+
+.register-link {
+  margin-left: 5px;
+}
+
+.security-message {
+  text-align: center;
+
+  margin-top: 20px;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+@media (max-width: 480px) {
+
+  .login-card {
+    padding: 25px 20px;
+  }
+
+  .bank-brand h1 {
+    font-size: 24px;
+  }
+
+}

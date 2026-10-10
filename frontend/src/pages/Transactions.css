@@ -1,0 +1,425 @@
+/* =========================================================
+   NH DIGITAL BANK
+   Transactions Page
+   ========================================================= */
+
+.transactions-page {
+  min-height: 100%;
+  padding: 32px;
+  background: #f6f8fb;
+}
+
+.transactions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.transactions-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.transactions-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.transactions-header p {
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.refresh-button {
+  border: 1px solid #d7dce5;
+  background: #ffffff;
+  color: #263247;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.refresh-button:hover {
+  background: #f1f4f8;
+}
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.transactions-filters {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.search-wrapper {
+  flex: 1;
+}
+
+.search-wrapper input,
+.transactions-filters select {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #d9dee7;
+  border-radius: 9px;
+  background: #ffffff;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #172033;
+  outline: none;
+  transition: border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.transactions-filters select {
+  width: 180px;
+}
+
+.search-wrapper input:focus,
+.transactions-filters select:focus {
+  border-color: #315efb;
+  box-shadow: 0 0 0 3px rgba(49, 94, 251, 0.1);
+}
+
+/* =========================================================
+   COUNT
+   ========================================================= */
+
+.transaction-count {
+  margin: 18px 2px;
+  color: #697386;
+  font-size: 14px;
+}
+
+.transaction-count strong {
+  color: #172033;
+}
+
+/* =========================================================
+   TRANSACTION LIST
+   ========================================================= */
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.transaction-card {
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.transaction-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(20, 31, 56, 0.07);
+}
+
+/* =========================================================
+   MAIN TRANSACTION ROW
+   ========================================================= */
+
+.transaction-main {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+}
+
+.transaction-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef3ff;
+  color: #315efb;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.transaction-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.transaction-title-row h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.transaction-info p {
+  margin: 6px 0;
+  color: #687386;
+  font-size: 14px;
+}
+
+.transaction-info p strong {
+  color: #344054;
+}
+
+.transaction-reference {
+  display: inline-block;
+  color: #8a94a6;
+  font-size: 12px;
+  font-family: monospace;
+  letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.transaction-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.status-success {
+  background: #e9f8ef;
+  color: #18794e;
+}
+
+.status-pending {
+  background: #fff6df;
+  color: #9a6700;
+}
+
+.status-failed {
+  background: #ffeded;
+  color: #c0392b;
+}
+
+/* =========================================================
+   AMOUNT
+   ========================================================= */
+
+.transaction-amount {
+  min-width: 160px;
+  text-align: right;
+}
+
+.transaction-amount strong {
+  display: block;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.transaction-amount span {
+  display: block;
+  margin-top: 6px;
+  color: #8992a3;
+  font-size: 12px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.transaction-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 22px;
+  background: #fafbfc;
+  border-top: 1px solid #edf0f4;
+  color: #8992a3;
+  font-size: 12px;
+}
+
+.transaction-footer strong {
+  color: #586174;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.transactions-loading {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #687386;
+  font-size: 15px;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.transactions-error {
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid #f1c7c7;
+  border-radius: 10px;
+  background: #fff2f2;
+  color: #b42318;
+  font-size: 14px;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.transactions-empty {
+  padding: 70px 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 14px;
+}
+
+.empty-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef3ff;
+  color: #315efb;
+  font-size: 24px;
+}
+
+.transactions-empty h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 19px;
+}
+
+.transactions-empty p {
+  margin: 8px 0 0;
+  color: #7a8495;
+  font-size: 14px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .transactions-page {
+    padding: 20px 16px;
+  }
+
+  .transactions-header {
+    flex-direction: column;
+  }
+
+  .refresh-button {
+    width: 100%;
+  }
+
+  .transactions-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .transactions-filters select {
+    width: 100%;
+  }
+
+  .transaction-main {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .transaction-info {
+    width: calc(100% - 64px);
+  }
+
+  .transaction-amount {
+    width: 100%;
+    padding-left: 64px;
+    text-align: left;
+  }
+
+  .transaction-amount span {
+    margin-top: 4px;
+  }
+
+  .transaction-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .transactions-header h1 {
+    font-size: 25px;
+  }
+
+  .transaction-main {
+    gap: 12px;
+    padding: 17px;
+  }
+
+  .transaction-icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .transaction-info {
+    width: calc(100% - 52px);
+  }
+
+  .transaction-title-row {
+    gap: 7px;
+  }
+
+  .transaction-title-row h2 {
+    font-size: 15px;
+  }
+
+  .transaction-amount {
+    padding-left: 52px;
+  }
+
+  .transaction-footer {
+    padding: 12px 17px;
+  }
+}

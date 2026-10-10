@@ -1,0 +1,168 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.dashboard-navbar {
+  height: 70px;
+  background: #0d47a1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: white;
+  color: #0d47a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.dashboard-brand h4 {
+  margin: 0;
+}
+
+.dashboard-brand small {
+  opacity: 0.8;
+}
+
+.dashboard-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard-layout {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+.dashboard-sidebar {
+  width: 240px;
+  background: white;
+  border-right: 1px solid #e2e8f0;
+  padding: 25px 15px;
+}
+
+.sidebar-item {
+  width: 100%;
+  display: block;
+  padding: 12px 15px;
+  margin-bottom: 5px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  border-radius: 8px;
+  color: #475569;
+  cursor: pointer;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+  background: #e8f0fe;
+  color: #0d47a1;
+  font-weight: 600;
+}
+
+.logout-item {
+  color: #dc2626;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 35px;
+}
+
+.welcome-section {
+  margin-bottom: 30px;
+}
+
+.welcome-section h2 {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.welcome-section p {
+  color: #64748b;
+}
+
+.balance-card {
+  background: #0d47a1;
+  color: white;
+  border-radius: 15px;
+  padding: 25px;
+  min-height: 180px;
+}
+
+.balance-card small {
+  opacity: 0.85;
+}
+
+.balance-card h2 {
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+.account-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  min-height: 180px;
+  box-shadow: 0 3px 15px rgba(15, 23, 42, 0.05);
+}
+
+.account-number {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 20px;
+}
+
+.quick-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+  transition: 0.2s;
+}
+
+.quick-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+}
+
+.transaction-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+    width: 70px;
+  }
+
+  .sidebar-item {
+    font-size: 0;
+    text-align: center;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+}
