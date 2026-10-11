@@ -250,12 +250,13 @@ function Login() {
             </span>
 
             <button
-              type="button"
-              data-testid="register-link"
-              className="link-button register-link"
-            >
-              Register
-            </button>
+  type="button"
+  data-testid="register-link"
+  className="link-button register-link"
+  onClick={() => navigate("/register")}
+>
+  Register
+</button>
 
           </div>
 
