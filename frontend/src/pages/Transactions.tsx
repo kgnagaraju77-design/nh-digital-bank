@@ -178,9 +178,6 @@ export default function Transactions() {
                 transaction.receiver_account_number
               );
 
-            const amount =
-              normalize(transaction.amount);
-
             const remarks =
               normalize(transaction.remarks);
 

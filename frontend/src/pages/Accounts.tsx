@@ -118,10 +118,13 @@ function Accounts() {
 
         setStatementError("");
 
-        const response =
-          await getAccountStatement(
-            account.id
-          );
+        const response = await getAccountStatement({
+  accountId: Number(account.id),
+  from: undefined,
+  to: undefined,
+  page: 1,
+  limit: 10,
+});
 
         console.log(
           "Statement response:",
@@ -134,9 +137,7 @@ function Accounts() {
         const transactions =
           Array.isArray(data)
             ? data
-            : data?.transactions ??
-              data?.statement ??
-              [];
+            : data?.transactions ?? [];
 
         setStatement(transactions);
 
@@ -556,7 +557,7 @@ function Accounts() {
                               <td>
                                 ₹
                                 {formatAmount(
-                                  transaction.amount
+                                  Number(transaction.amount)
                                 )}
                               </td>
 
