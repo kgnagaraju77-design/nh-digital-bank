@@ -218,11 +218,12 @@ function Login() {
             <div className="forgot-password">
 
               <button
-                type="button"
-                className="link-button"
-              >
-                Forgot Password?
-              </button>
+  type="button"
+  className="link-button"
+  onClick={() => navigate("/forgot-password")}
+>
+  Forgot Password?
+</button>
 
             </div>
 

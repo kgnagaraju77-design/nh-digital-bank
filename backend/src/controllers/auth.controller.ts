@@ -4,6 +4,7 @@ import {
     AuthRequest
 } from "../middleware/auth.middleware";
 
+import { sendPasswordResetEmail } from "../services/email.service";
 
 
 import {
@@ -489,7 +490,19 @@ export async function forgotPassword(
                 email.trim().toLowerCase()
             );
 
-
+if (result.resetToken) {
+  try {
+    await sendPasswordResetEmail(
+      email.trim().toLowerCase(),
+      result.resetToken
+    );
+  } catch (emailError) {
+    console.error(
+      "Password reset email delivery failed:",
+      emailError
+    );
+  }
+}
         /*
          * 4. Always return generic
          * response.

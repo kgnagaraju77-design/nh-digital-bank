@@ -13,6 +13,10 @@ import AppShell from "./components/layout/AppShell";
 
 import Login from "./pages/Login";
 
+import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+
 import Dashboard from "./pages/Dashboard";
 
 import Accounts from "./pages/Accounts";
@@ -84,6 +88,19 @@ function App() {
           }
         />
 
+        <Route
+  path="/forgot-password"
+  element={<ForgotPassword />}
+/>
+
+<Route
+  path="/reset-password"
+  element={<ResetPassword />}
+/>
+<Route
+  path="/register"
+  element={<Register />}
+/>
 
         {/* ==================================================
             BANKING APPLICATION
